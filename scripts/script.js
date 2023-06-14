@@ -22,12 +22,6 @@ async function getCityLoc(cityName) {
   const res = await fetch(base);
   const data = await res.json();
 
-  console.log({
-    city: data.results[0].name,
-    admin: data.results[0].admin1,
-    latitude: data.results[0].latitude,
-    longitude: data.results[0].longitude,
-  });
   return {
     city: data.results[0].name,
     admin: data.results[0].admin1,
